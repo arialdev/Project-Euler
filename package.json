@@ -19,5 +19,6 @@
   "homepage": "https://github.com/arialdev/Project-Euler#readme",
   "devDependencies": {
     "eslint": "^8.18.0"
-  }
+  },
+  "type": "module"
 }
