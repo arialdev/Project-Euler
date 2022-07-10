@@ -8,5 +8,3 @@ export const getPrimeFactors = (n) => {
   }
   return [...primes];
 }
-
-console.log(getPrimeFactors(600851475143));
