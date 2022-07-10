@@ -6,7 +6,7 @@ export async function getPrimesSum(upperBound) {
   const promises = [];
   for (let i = 0; i < THREADS_COUNT; i++) {
     const lb = (i * BATCH_SIZE) || 2;
-    const ub = Math.min(i * (BATCH_SIZE) + BATCH_SIZE, lb + BATCH_SIZE);
+    const ub = i === THREADS_COUNT - 1 ? upperBound : i * (BATCH_SIZE) + BATCH_SIZE;
     promises.push(
       new Promise(resolve => resolve(getPrimesSumAux(lb, ub)))
     );
@@ -34,3 +34,5 @@ export function isPrime(n) {
 getPrimesSum(2_000_000).then(res => {
   console.log(res);
 });
+
+// console.log(getPrimesSumAux(2, 2000000))
