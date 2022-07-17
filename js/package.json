@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^8.18.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "number-to-words": "^1.2.4"
+  }
 }
