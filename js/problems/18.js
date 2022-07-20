@@ -2,9 +2,7 @@ import { readFile } from 'node:fs';
 import { resolve } from 'node:path';
 
 const findLargestPath = (uri) => {
-  return buildTriangleListFromFile(uri).then(({ tree, maxDigit }) => {
-    return findPathRecursive(tree, 0, 0, -1, +'9'.repeat(maxDigit));
-  });
+  return buildTriangleListFromFile(uri).then(tree => findPathRecursive(tree, 0, 0, -1, 99));
 
   function findPathRecursive(tree, i, j, best, maxDigit) {
     if (i === tree.length - 1) return tree[i][j];
@@ -18,21 +16,14 @@ const findLargestPath = (uri) => {
   }
 };
 
-const buildTriangleListFromFile = uri => {
+export const buildTriangleListFromFile = uri => {
   return new Promise(resolve => {
     readFile(uri, { encoding: 'utf-8' }, (_, data) => {
-      let maxDigit = 0;
-      let tree = [];
-      data.split('\n').map((row, i) => row.split(' ').forEach(n => {
-        maxDigit = Math.max(maxDigit, n.length);
-        (tree[i] ??= []).push(+n);
-      }));
-      resolve({ tree, maxDigit });
+      const tree = data.split('\n').map(row => row.split(' ').map(d => +d));
+      resolve(tree);
     });
   });
 };
 
-
-// let a = findLargestPath(resolve('files/18.input.txt'));
-let a = findLargestPath(resolve('files/p067_triangle.txt'));
+let a = findLargestPath(resolve('files/18.input.txt'));
 a.then(console.log)
