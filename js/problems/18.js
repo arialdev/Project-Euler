@@ -3,8 +3,7 @@ import { resolve } from 'node:path';
 
 const findLargestPath = (uri) => {
   return buildTriangleListFromFile(uri).then(({ tree, maxDigit }) => {
-    // return findPathRecursive(tree, 0, 0, -1, +'9'.repeat(maxDigit));
-    return findPathRecursive(tree, 0, 0, -1, 50);
+    return findPathRecursive(tree, 0, 0, -1, +'9'.repeat(maxDigit));
   });
 
   function findPathRecursive(tree, i, j, best, maxDigit) {
