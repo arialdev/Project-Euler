@@ -15,6 +15,7 @@ const ex35 = (top) => {
   const primes = new Map();
   let counter = 0;
   for (let i = 2; i < top; i++) {
+    if (i.toString().includes('0') || i.toString().includes('2') || i.toString().includes('4') || i.toString().includes('5') || i.toString().includes('6') || i.toString().includes('8')) continue;
     let circular = true;
     const rotations = getNumberRotations(i);
     for (let r of rotations) {
@@ -28,7 +29,7 @@ const ex35 = (top) => {
     }
     if (circular) counter++;
   }
-  return counter;
+  return counter + 2;
 };
 
 const isPrime = (n) => {
