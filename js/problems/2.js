@@ -11,7 +11,4 @@ const evenFibonacci = () => {
     return [...new Set(solutions)];
 }
 
-
-const sol = evenFibonacci();
-console.log(sol);
-console.log(sol.reduce((acc, curr) => acc + curr))
+export const ex2 = () => evenFibonacci().reduce((acc, curr) => acc + curr);

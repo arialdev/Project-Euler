@@ -7,4 +7,5 @@ const findMultiplesOfThreeOrFive = (n) => {
 
 const getSumFromMultiplesOfThreeOrFive = (n) => findMultiplesOfThreeOrFive.call(this, n).reduce((acc, curr) => acc + curr);
 
-console.log(getSumFromMultiplesOfThreeOrFive(1000))
+
+export const ex1 = getSumFromMultiplesOfThreeOrFive(1000);
