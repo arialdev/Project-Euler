@@ -27,7 +27,3 @@ export function ex23() {
   }
   return result;
 }
-
-console.time('ex23');
-console.log(ex23());
-console.timeEnd('ex23');

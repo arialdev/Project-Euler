@@ -2,7 +2,8 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const findLargestPath = (uri) => {
-  return buildTriangleListFromFile(uri).then(tree => findPathRecursive(tree, 0, 0, -1, 99));
+  const tree = buildTriangleListFromFile(uri);
+  return findPathRecursive(tree, 0, 0, -1, 99);
 
   function findPathRecursive(tree, i, j, best, maxDigit) {
     if (i === tree.length - 1) return tree[i][j];

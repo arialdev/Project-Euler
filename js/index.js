@@ -3,6 +3,7 @@ function runExercice(label, fn) {
 	const exResult = fn();
 	console.timeEnd(label);
 	console.log(label, exResult);
+
 }
 
 import {ex1} from './problems/1.js';
