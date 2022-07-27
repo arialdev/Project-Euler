@@ -1,4 +1,4 @@
-export const badAssFibonacci = () => {
+export const ex25 = () => {
   let n = BigInt(1);
   let i = 2;
   let previousNumber = BigInt(1);
@@ -10,7 +10,3 @@ export const badAssFibonacci = () => {
   }
   return i;
 };
-
-console.time('ex25');
-console.log(badAssFibonacci());
-console.timeEnd('ex25');

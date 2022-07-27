@@ -1,4 +1,4 @@
-function ex23() {
+export function ex23() {
   const divisorsMap = {};
   for (let i = 2; i <= 28123; i++) {
     let value = 0;

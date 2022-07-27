@@ -1,4 +1,4 @@
-const ex29 = (lb, ub) => {
+export const ex29 = (lb = 2, ub = 100) => {
   let results = new Set();
   for (let a = lb; a <= ub; a++) {
     let acc = BigInt(a) ** BigInt(lb);
@@ -9,6 +9,4 @@ const ex29 = (lb, ub) => {
     }
   }
   return results.size;
-}
-
-console.log(ex29(2, 100))
+};

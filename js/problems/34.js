@@ -8,7 +8,7 @@ const generateFactorialsMap = () => {
   return map;
 };
 
-const ex34 = () => {
+export const ex34 = () => {
   const digitMap = generateFactorialsMap();
   let result = 0;
   for (let i = 10; i < 999999; i++) {
@@ -20,8 +20,4 @@ const ex34 = () => {
     if (sumValue === i) result += i;
   }
   return result;
-}
-
-console.time('ex34');
-console.log(ex34());
-console.timeEnd('ex34');
+};

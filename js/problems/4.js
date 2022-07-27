@@ -24,4 +24,4 @@ const isPalindrome = (n) => {
   return true;
 }
 
-console.log(findPalindromeFromProduct(3));
+export const ex4 = findPalindromeFromProduct.bind(this, 3);

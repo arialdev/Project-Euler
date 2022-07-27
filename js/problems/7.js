@@ -13,4 +13,4 @@ const isPrime = (n) => {
     return factors.length === 1 && factors[0] === n;
 }
 
-console.log('sol', getNthPrime(10_001))
+export const ex7 = getNthPrime.bind(this, 10_001);

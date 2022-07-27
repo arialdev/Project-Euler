@@ -13,4 +13,4 @@ export const getSundaysCount = (dateFrom, dateTo) => {
   return sundaysCount;
 };
 
-console.log(getSundaysCount(new Date(1901, 1, 1), new Date(2000, 12, 31)))
+export const ex19 = getSundaysCount.bind(this, new Date(1901, 1, 1), new Date(2000, 12, 31));

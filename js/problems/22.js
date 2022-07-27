@@ -13,4 +13,4 @@ const getNameListFromURI = uri => {
     .reduce((acc, e, i) => acc + e * (i + 1));
 };
 
-console.log(getNameListFromURI(resolve('files/p022_names.txt')))
+export const ex22 = getNameListFromURI.bind(this, resolve('files/p022_names.txt'));

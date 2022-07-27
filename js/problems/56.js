@@ -1,4 +1,4 @@
-const ex56 = () => {
+export const ex56 = () => {
   let result = 0;
   for (let i = 1; i < 100; i++) {
     for (let j = 1; j < 100; j++) {
@@ -6,8 +6,4 @@ const ex56 = () => {
     }
   }
   return result;
-}
-
-console.time('ex56');
-console.log(ex56());
-console.timeEnd('ex56');
+};

@@ -1,4 +1,4 @@
-const getWeirdPythagoreanTriplet = () => {
+export const ex9 = () => {
   for (let c = 0; c < 998; c++) {
     for (let b = 0; b < c; b++) {
       for (let a = 0; a < b; a++) {
@@ -10,6 +10,4 @@ const getWeirdPythagoreanTriplet = () => {
     }
   }
   return undefined;
-}
-
-console.log(getWeirdPythagoreanTriplet());
+};

@@ -26,4 +26,4 @@ export function getSumOfAmicables(from, to) {
 
 }
 
-console.log(getSumOfAmicables(2, 9999));
+export const ex21 = getSumOfAmicables.bind(this, 2, 9999);

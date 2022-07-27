@@ -9,4 +9,4 @@ const sumDigits = (n) => n.toString().split('').map(d => +d).reduce((acc, d) => 
 
 export const sumFactorialDigits = (n) => sumDigits(factorial(n));
 
-console.log(sumFactorialDigits(100));
+export const ex20 = sumFactorialDigits.bind(this, 100);

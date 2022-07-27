@@ -1,4 +1,4 @@
-const ex45 = () => {
+export const ex45 = () => {
   const getTriangle = n => n * (n + 1) / 2;
   const getPentagon = n => n * (3 * n - 1) / 2;
   const getHexagon = n => n * (2 * n - 1);
@@ -22,8 +22,4 @@ const ex45 = () => {
     hexagonals.add(h);
     i++
   }
-}
-
-console.time('ex45');
-console.log(ex45());
-console.timeEnd('ex45');
+};

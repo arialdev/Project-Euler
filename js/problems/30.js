@@ -11,6 +11,6 @@ const weirdNumber = power => {
       result += i;
   }
   return result;
-}
+};
 
-console.log(weirdNumber(5))
+export const ex30 = weirdNumber.bind(this, 5);

@@ -8,4 +8,4 @@ const findPathsAux = (n, r, c) => {
   return findPathsAux(n, r + 1, c) + findPathsAux(n, r, c + 1);
 }
 
-console.log(findPaths(20))
+export const ex15 = findPaths.bind(this, 20);

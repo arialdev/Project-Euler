@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const findLargestPath = (uri) => {
@@ -17,13 +17,8 @@ const findLargestPath = (uri) => {
 };
 
 export const buildTriangleListFromFile = uri => {
-  return new Promise(resolve => {
-    readFile(uri, { encoding: 'utf-8' }, (_, data) => {
-      const tree = data.split('\n').map(row => row.split(' ').map(d => +d));
-      resolve(tree);
-    });
-  });
+  const data = readFileSync(uri, { encoding: 'utf-8' });
+  return data.split('\n').map(row => row.split(' ').map(d => +d));
 };
 
-let a = findLargestPath(resolve('files/18.input.txt'));
-a.then(console.log)
+export const ex18 = findLargestPath.bind(this, resolve('files/18.input.txt'));

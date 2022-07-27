@@ -1,4 +1,4 @@
-const ex26 = () => {
+export const ex26 = () => {
   let longest = 1;
   let result = 1;
   for (let d = 1; d < 1000; d++) {
@@ -30,5 +30,3 @@ function getDecimalCycle(numerator, denominator) {
 
   return undefined;
 }
-
-console.log(ex26());

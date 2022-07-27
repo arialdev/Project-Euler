@@ -34,4 +34,4 @@ const generateMatrix = n => {
   return result - 1;
 }
 
-console.log(generateMatrix(1001))
+export const ex28 = generateMatrix.bind(this, 1001);

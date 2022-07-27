@@ -11,7 +11,7 @@ const getNumberRotations = n => {
   return rotations;
 };
 
-const ex35 = (top) => {
+export const ex35 = (top = 1_000_000) => {
   const primes = new Map();
   let counter = 0;
   for (let i = 2; i < top; i++) {
@@ -38,8 +38,3 @@ const isPrime = (n) => {
   }
   return true;
 };
-
-console.time('ex35');
-const result = ex35(1_000_000);
-console.timeEnd('ex35');
-console.log(result);

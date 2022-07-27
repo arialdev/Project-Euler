@@ -8,7 +8,7 @@ export const countNumbersCharactersFromRange = (bottom, top) => {
   return counter;
 }
 
-console.log(countNumbersCharactersFromRange(0, 1000));
+export const ex17 = countNumbersCharactersFromRange.bind(this, 0, 1000);
 
 
 function inWords(numIn) {

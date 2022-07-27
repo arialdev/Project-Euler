@@ -31,8 +31,4 @@ export function isPrime(n) {
   return true;
 }
 
-getPrimesSum(2_000_000).then(res => {
-  console.log(res);
-});
-
-// console.log(getPrimesSumAux(2, 2000000))
+export const ex10 = getPrimesSumAux.bind(this, 2, 2000000);

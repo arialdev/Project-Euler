@@ -1,4 +1,4 @@
-export const ex12 = (upperBound) => {
+export const ex12 = (upperBound = 500) => {
   console.time('Exercice 12 v2');
   let a = 1;
   let t = 1;
@@ -15,6 +15,4 @@ export const ex12 = (upperBound) => {
   }
   console.timeEnd('Exercice 12 v2');
   return { a, t, divisors };
-}
-
-console.log(ex12(500));
+};

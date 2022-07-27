@@ -40,7 +40,4 @@ const buildTriangleListFromFile = uri => {
   return data.split('\n').map(row => row.split(' ').map(d => +d));
 };
 
-console.time('ex67');
-let a = findLargestPath(resolve('files/p067_triangle.txt'));
-console.timeEnd('ex67');
-console.log(a);
+export const ex67 = findLargestPath.bind(this, resolve('files/p067_triangle.txt'));

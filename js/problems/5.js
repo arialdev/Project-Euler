@@ -1,8 +1,4 @@
-export const getSmallestIntDivisibleBy1To20 = () => {
-  return lcm(20);
-}
-
-
+export const ex5 = lcm.bind(this, 20);
 
 export function lcm(n) {
   let ans = 1;
@@ -14,5 +10,3 @@ export function lcm(n) {
 function gcd(a, b) {
   return (b === 0) ? a : gcd(b, a % b);
 }
-
-console.log(getSmallestIntDivisibleBy1To20())

@@ -1,0 +1,6 @@
+
+> project-euler@1.0.0 start
+> node index.js
+
+4179871
+ex23: 2.082s

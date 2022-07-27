@@ -102,4 +102,4 @@ const n = [
   BigInt(53503534226472524250874054075591789781264330331690n)
 ];
 
-console.log(bigSum(n));
+export const ex13 = bigSum.bind(this, n);

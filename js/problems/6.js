@@ -8,4 +8,4 @@ export const getDifferenceBetweenSumOfSquaresAndSquareOfTheSum = (n) => {
   return sum ** 2 - sumOfSquares;
 }
 
-console.log(getDifferenceBetweenSumOfSquaresAndSquareOfTheSum(100))
+export const ex6 = getDifferenceBetweenSumOfSquaresAndSquareOfTheSum.bind(this, 100);

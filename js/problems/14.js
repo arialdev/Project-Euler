@@ -1,4 +1,4 @@
-export const findLongestCollatzSequence = () => {
+export const ex14 = () => {
   let result = { n: undefined, length: -1 };
   for (let i = 0; i < 1_000_000; i++) {
     const seq = collatzSequence(i).length;
@@ -17,5 +17,3 @@ const collatzSequence = (n) => {
   };
   return collatzRecursive(n, []);
 };
-
-console.log(findLongestCollatzSequence());

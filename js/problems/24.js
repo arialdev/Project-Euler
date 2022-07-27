@@ -16,7 +16,4 @@ const stringPermutations = str => {
     );
 };
 
-console.time('ex24');
-const res = stringPermutations('0123456789').map(n => +n).sort(Math.min)[999_999];
-console.timeEnd('ex24')
-console.log(res);
+export const ex24 = () => stringPermutations('0123456789').map(n => +n).sort(Math.min)[999_999];
