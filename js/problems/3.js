@@ -7,4 +7,6 @@ export const getPrimeFactors = (n) => {
     n /= p;
   }
   return [...primes];
-}
+};
+
+export const ex3 = getPrimeFactors.bind(this, 600851475143);
