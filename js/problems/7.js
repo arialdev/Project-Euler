@@ -1,16 +1,21 @@
-import { getPrimeFactors } from './3.js';
-export const getNthPrime = (n) => {
+export const ex7 = () => {
     let counter = 0;
-    let i = 1;
-    while (counter < n) {
-        if (isPrime(++i)) counter++;
+    let prime = undefined;
+    let i = 2;
+    while (counter < 10_001) {
+        if (isPrime(i)) {
+            counter++;
+            prime = i;
+        }
+        i++;
     }
-    return i;
+    return prime;
 }
 
-const isPrime = (n) => {
-    const factors = getPrimeFactors(n);
-    return factors.length === 1 && factors[0] === n;
+export function isPrime(n) {
+    const root = Math.sqrt(n)
+    for (let i = 2; i <= root; i++) {
+        if (n % i === 0) return false;
+    }
+    return true;
 }
-
-export const ex7 = getNthPrime.bind(this, 10_001);

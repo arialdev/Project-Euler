@@ -32,5 +32,5 @@ function getFileNames() {
 }
 
 function executeFunction() {
-  return `function runExercice(label, fn) {\n\tconsole.time(label);\n\tconst exResult = fn();\n\tconsole.timeEnd(label);\n\tconsole.log(label, exResult);\n\n}\n`;
+  return `function runExercice(label, fn) {\n\tconsole.time(label);\n\tconst exResult = fn();\n\tconsole.timeEnd(label);\n\tconsole.log(label, exResult);\n}\n\n`;
 }
