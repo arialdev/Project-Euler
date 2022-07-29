@@ -1,19 +1,23 @@
 export const ex14 = () => {
-  let result = { n: undefined, length: -1 };
-  for (let i = 0; i < 1_000_000; i++) {
-    const seq = collatzSequence(i).length;
-    if (seq > result.length) {
-      result = { n: i, length: collatzSequence(i).length };
-    }
-  }
-  return result;
-}
+  let bestResult = { value: -1, number: undefined };
+  const cache = {};
 
-const collatzSequence = (n) => {
-  const collatzRecursive = (n, sequence) => {
-    if (n <= 1) return sequence;
-    if (n % 2 === 0) return collatzRecursive(n / 2, [...sequence, n]);
-    else return collatzRecursive(3 * n + 1, [...sequence, n]);
-  };
-  return collatzRecursive(n, []);
-};
+  for (let i = 0; i < 1_000_000; i++) {
+    let v = i;
+    let count = 0;
+    while (v > 1) {
+      if (cache[v] && i !== v) {
+        count += cache[v];
+        cache[i] = count;
+        if (count > bestResult.value) {
+          bestResult = { value: count, number: i }
+        }
+        break;
+      }
+      v = v % 2 ? 3 * v + 1 : v / 2;
+      count++;
+    }
+    cache[i] = count;
+  }
+  return bestResult;
+}
