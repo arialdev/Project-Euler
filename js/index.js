@@ -118,6 +118,5 @@ runExercice('ex56', ex56);
 import {ex67} from './problems/67.js';
 runExercice('ex67', ex67);
 
-console.log('-----------------');
-
+console.log('-----------------\n');
 console.timeEnd('npm');
