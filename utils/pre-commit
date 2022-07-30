@@ -7,7 +7,7 @@ generateDocument();
 
 function generateDocument() {
   console.info('Generating index.js...');
-  let document = `${executeFunction()}\nconsole.time('npm');\n`;
+  let document = `${executeFunction()}console.time('npm');\n\n`;
   getFileNames().forEach(exercice => {
     document += `import {ex${exercice}} from './problems/${exercice}.js';\nrunExercice('ex${exercice}', ex${exercice});\n\n`;
   });

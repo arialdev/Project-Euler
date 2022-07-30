@@ -5,8 +5,8 @@ function runExercice(label, fn) {
 	console.log(label, exResult);
 }
 
-
 console.time('npm');
+
 import {ex1} from './problems/1.js';
 runExercice('ex1', ex1);
 
