@@ -19,5 +19,5 @@ export const ex14 = () => {
     }
     cache[i] = count;
   }
-  return bestResult;
+  return bestResult.number;
 }

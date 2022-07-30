@@ -1,5 +1,4 @@
 export const ex12 = (upperBound = 500) => {
-  console.time('Exercice 12 v2');
   let a = 1;
   let t = 1;
   let divisors = 0
@@ -13,6 +12,5 @@ export const ex12 = (upperBound = 500) => {
     }
     if (t === ttx * ttx) divisors--;
   }
-  console.timeEnd('Exercice 12 v2');
-  return { a, t, divisors };
+  return t;
 };

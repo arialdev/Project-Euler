@@ -6,7 +6,7 @@ export const getPrimeFactors = (n) => {
     primes.add(p);
     n /= p;
   }
-  return [...primes];
+  return [...primes].reduce((acc, e) => Math.max(acc, e));
 };
 
 export const ex3 = getPrimeFactors.bind(this, 600851475143);
