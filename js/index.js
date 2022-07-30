@@ -6,6 +6,7 @@ function runExercice(label, fn) {
 }
 
 
+console.time('npm');
 import {ex1} from './problems/1.js';
 runExercice('ex1', ex1);
 
@@ -117,3 +118,4 @@ runExercice('ex56', ex56);
 import {ex67} from './problems/67.js';
 runExercice('ex67', ex67);
 
+console.timeEnd('npm');

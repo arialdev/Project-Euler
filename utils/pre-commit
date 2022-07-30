@@ -7,11 +7,11 @@ generateDocument();
 
 function generateDocument() {
   console.info('Generating index.js...');
-  let document = `${executeFunction()}\n`;
+  let document = `${executeFunction()}\nconsole.time('npm');\n`;
   getFileNames().forEach(exercice => {
     document += `import {ex${exercice}} from './problems/${exercice}.js';\nrunExercice('ex${exercice}', ex${exercice});\n\n`;
   });
-
+  document += `console.timeEnd('npm');`
   fs.writeFileSync(path.join(__dirname, '..', '..', 'js', 'index.js'), document, { encoding: 'utf-8' });
 
   const { exec } = require('child_process');
