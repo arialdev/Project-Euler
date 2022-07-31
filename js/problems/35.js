@@ -29,7 +29,6 @@ export const ex35 = (top = 1_000_000) => {
     }
     if (circular) counter++;
   }
-  console.log(primes)
   return counter;
 };
 
@@ -40,5 +39,3 @@ const isPrime = (n) => {
   }
   return true;
 };
-
-console.time(); console.log(ex35(100)); console.timeEnd()
