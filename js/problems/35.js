@@ -15,7 +15,8 @@ export const ex35 = (top = 1_000_000) => {
   const primes = new Map();
   let counter = 0;
   for (let i = 2; i < top; i++) {
-    if (i.toString().includes('0') || i.toString().includes('2') || i.toString().includes('4') || i.toString().includes('5') || i.toString().includes('6') || i.toString().includes('8')) continue;
+    const str = i.toString();
+    if (i !== 2 && i !== 3 && i !== 5 && (str.includes('0') || str.includes('2') || str.includes('4') || str.includes('5') || str.includes('6') || str.includes('8'))) continue;
     let circular = true;
     const rotations = getNumberRotations(i);
     for (let r of rotations) {
@@ -23,18 +24,21 @@ export const ex35 = (top = 1_000_000) => {
         circular = isPrime(r);
         primes.set(r, circular);
       }
-      else
-        circular = primes.get(r);
+      else circular = primes.get(r);
       if (!circular) break;
     }
     if (circular) counter++;
   }
-  return counter + 2;
+  console.log(primes)
+  return counter;
 };
 
 const isPrime = (n) => {
-  for (let i = 2; i < n; i) {
-    if (n % (i++) === 0) return false;
+  const root = Math.floor(Math.sqrt(n));
+  for (let i = 2; i <= root; i++) {
+    if (n % i === 0) return false;
   }
   return true;
 };
+
+console.time(); console.log(ex35(100)); console.timeEnd()
