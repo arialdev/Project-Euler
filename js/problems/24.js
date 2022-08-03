@@ -1,19 +1,18 @@
-const stringPermutations = str => {
-  if (str.length <= 2)
-    return str.length === 2 ? [str, str[1] + str[0]] : [str];
+export const ex24 = () => {
+  let digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  let result = '';
+  let searching = 1000000;
 
-  if (str.length === 1) {
-    return [str];
+  while (digits.length > 1) {
+    const permutations = factorial(digits.length - 1);
+    const batch = Math.ceil(searching / permutations) - 1;
+    const thisdigit = digits[batch];
+    result += thisdigit;
+    digits = digits.filter(d => d !== thisdigit);
+    searching -= permutations * (batch);
   }
-  if (str.length === 2) {
-    return [str, str[1] + str[0]]
-  }
-  return str
-    .split('')
-    .reduce(
-      (acc, digit, i) => [...acc, ...stringPermutations(str.slice(0, i) + str.slice(i + 1)).map(val => digit + val)],
-      []
-    );
+  result += digits[0];
+  return +result;
 };
 
-export const ex24 = () => stringPermutations('0123456789').map(n => +n).sort(Math.min)[999_999];
+const factorial = n => n === 1 ? 1 : n * factorial(n - 1);
