@@ -31,7 +31,3 @@ export const ex27 = () => {
 };
 
 const fn = (n, a, b) => Math.pow(n, 2) + (n * a) + b;
-
-console.time();
-console.log(ex27());
-console.timeEnd();
