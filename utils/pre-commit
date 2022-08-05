@@ -8,11 +8,12 @@ generateDocument();
 async function generateDocument() {
   console.info('Generating index.js...');
   let document = `${executeFunction()}console.time('npm');\n\n`;
-  getFileNames().forEach(async exercice => {
+  const fileNames = getFileNames();
+  for (const exercice of fileNames) {
     if (await checkExercice(exercice)) {
       document += `import {ex${exercice}} from './problems/${exercice}.js';\nrunExercice('ex${exercice}', ex${exercice});\n\n`;
     }
-  });
+  }
   document += `console.log('-----------------\\n');\nconsole.timeEnd('npm');`
   fs.writeFileSync(path.join(__dirname, '..', '..', 'js', 'index.js'), document, { encoding: 'utf-8' });
 
