@@ -9,8 +9,9 @@ async function generateDocument() {
   console.info('Generating index.js...');
   let document = `${executeFunction()}console.time('npm');\n\n`;
   getFileNames().forEach(async exercice => {
-    if (await checkExercice(exercice))
+    if (await checkExercice(exercice)) {
       document += `import {ex${exercice}} from './problems/${exercice}.js';\nrunExercice('ex${exercice}', ex${exercice});\n\n`;
+    }
   });
   document += `console.log('-----------------\\n');\nconsole.timeEnd('npm');`
   fs.writeFileSync(path.join(__dirname, '..', '..', 'js', 'index.js'), document, { encoding: 'utf-8' });
@@ -26,8 +27,9 @@ async function generateDocument() {
 }
 
 async function checkExercice(number) {
-  const res = fetch(`https://raw.githubusercontent.com/arialdev/Project-Euler/main/js/problems/${number}.js`)
-  return (await res).status === 200;
+  const res = await fetch(`https://raw.githubusercontent.com/arialdev/Project-Euler/main/js/problems/${number}.js`)
+  console.log(res.status, res.status === 200)
+  return res.status === 200;
 }
 
 function getFileNames() {
