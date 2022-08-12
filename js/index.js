@@ -133,5 +133,5 @@ runExercice('ex67', ex67);
 import {ex97} from './problems/97.js';
 runExercice('ex97', ex97);
 
-console.log('-----------------\n');
+console.log('------------------\n');
 console.timeEnd('npm');
