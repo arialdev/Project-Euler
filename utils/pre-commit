@@ -15,7 +15,7 @@ async function generateDocument() {
   let modifiedFile;
 
   try {
-    const { stdout } = await exec(`git diff --name-only --cached | grep ".js"`);
+    const { stdout } = await exec(`git diff --name-only --cached | grep .js`);
     modifiedFile = /(\d+)\.js/gm.exec(stdout)?.[1]
   } catch (err) {
     console.error(err);
