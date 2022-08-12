@@ -124,6 +124,9 @@ runExercice('ex45', ex45);
 import {ex48} from './problems/48.js';
 runExercice('ex48', ex48);
 
+import {ex52} from './problems/52.js';
+runExercice('ex52', ex52);
+
 import {ex56} from './problems/56.js';
 runExercice('ex56', ex56);
 

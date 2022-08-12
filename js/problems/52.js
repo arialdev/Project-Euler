@@ -14,4 +14,4 @@ export const ex52 = () => {
 const containsSameDigits = (a, b) => {
   const stringify = n => [...n.toString()].sort().join('');
   return stringify(a) === stringify(b);
-}
+};
