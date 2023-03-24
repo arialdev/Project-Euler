@@ -23,6 +23,7 @@
   },
   "type": "module",
   "dependencies": {
+    "fraction.js": "^4.2.0",
     "number-to-words": "^1.2.4"
   }
 }
