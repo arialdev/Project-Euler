@@ -136,6 +136,9 @@ runExercice('ex48', ex48);
 import {ex52} from './problems/52.js';
 runExercice('ex52', ex52);
 
+import {ex53} from './problems/53.js';
+runExercice('ex53', ex53);
+
 import {ex56} from './problems/56.js';
 runExercice('ex56', ex56);
 
