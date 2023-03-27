@@ -23,5 +23,3 @@ const getSolutionsNumber = (p) => {
   }
   return solutions;
 };
-
-console.log(ex39());

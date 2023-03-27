@@ -42,5 +42,3 @@ const getProducts = (nStr) => {
   }
   return productsCounter;
 };
-
-console.log(ex32());

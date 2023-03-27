@@ -3,7 +3,6 @@ export const ex9 = () => {
     for (let b = 0; b < c; b++) {
       for (let a = 0; a < b; a++) {
         if (a + b + c === 1000 && a ** 2 + b ** 2 === c ** 2) {
-          console.log(a, b, c)
           return a * b * c;
         }
       }
