@@ -6,7 +6,7 @@ export const ex32 = () => {
   return filteredProducts.reduce((acc, p) => acc + p);
 }
 
-const getPossibilities = (digits) => {
+export const getPossibilities = (digits) => {
   const backtracking = (tmp, candidates, used) => {
     if (tmp.length === digits.length) {
       return void res.push(tmp.join(''));
