@@ -1,29 +1,28 @@
 {
   "name": "project-euler",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Personal repository for the Project Euler",
+  "keywords": [],
+  "homepage": "https://github.com/arialdev/Project-Euler#readme",
+  "bugs": {
+    "url": "https://github.com/arialdev/Project-Euler/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/arialdev/Project-Euler.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/arialdev/Project-Euler/issues"
-  },
-  "homepage": "https://github.com/arialdev/Project-Euler#readme",
-  "devDependencies": {
-    "eslint": "^8.18.0"
-  },
+  "author": "Álvaro Rivas (arialdev)",
   "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "fraction.js": "^4.2.0",
     "number-to-words": "^1.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.45.0"
   }
 }
